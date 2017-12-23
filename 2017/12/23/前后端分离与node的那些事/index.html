@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="JQP&#39;s Blog">
 <meta property="og:description" content="前言现在的前端同学如果去面试的话，面试的问题肯定会有你了解前后端分离吗，你了解nodejs吗？在没有了解的时候感觉这是个什么东西，好高大上，去网上查了查资料，再多做几个demo，终于对传说中的前后端分离以及nodejs有了一些了解。 其实在技术这个行业里面没有什么是绝对好的技术也没有什么是过时的差的技术，只要合适的技术在合适的环境下他就是最好的技术，所以我们在学习一些新技术的时候，也不要觉着只要是">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-23T08:23:59.848Z">
+<meta property="og:updated_time" content="2017-12-23T08:33:29.431Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前后端分离与Node和NPM的那些事">
 <meta name="twitter:description" content="前言现在的前端同学如果去面试的话，面试的问题肯定会有你了解前后端分离吗，你了解nodejs吗？在没有了解的时候感觉这是个什么东西，好高大上，去网上查了查资料，再多做几个demo，终于对传说中的前后端分离以及nodejs有了一些了解。 其实在技术这个行业里面没有什么是绝对好的技术也没有什么是过时的差的技术，只要合适的技术在合适的环境下他就是最好的技术，所以我们在学习一些新技术的时候，也不要觉着只要是">
@@ -357,7 +357,7 @@
 <h1 id="前后端分离的核心：后台提供数据，前端负责显示"><a href="#前后端分离的核心：后台提供数据，前端负责显示" class="headerlink" title="前后端分离的核心：后台提供数据，前端负责显示"></a>前后端分离的核心：后台提供数据，前端负责显示</h1><p>最近前端大热的什么MVC,MVVM框架VUEJS,angularjs，Reactjs了一说就是为了更好的前后端分离开发，难道不用这几个框架就不是前后端分离了吗？当然不是的，只要不是服务端直接渲染的就是前后端分离，比如正常的生产环境之下，后台同学给了我们前端同学一些数据接口我们用Ajax同后台交互然后在前端页面上操作这些数据这就是前后端分离，那为什么vue,angular,react会大热呢，以我自己学习了解之后感觉其实就是俩点。用我比较熟悉的vue框架来举例说明。  </p>
 <h2 id="1双向绑定"><a href="#1双向绑定" class="headerlink" title="1双向绑定"></a>1双向绑定</h2><p>一个所谓双向绑定，用vue举例来说就是vue实例中的data与其渲染的DOM元素的内容保持一致，无论谁被改变，另一方会相应的更新为相同的数据这是框架通过内部的封装机制实现的，在我们日常开发比如这么一个功能用户需要修改一个表单内容而在其下方有个视图是可以实时展示表单内容的，<br>而我们开发的时候就需要写大量的js来互相监听元素的内容和表单的内容是否发生了变化，而vue已经帮我们写好了，只要我们按照它规定的语法进行配置就好了。</p>
 <h2 id="2依赖注入"><a href="#2依赖注入" class="headerlink" title="2依赖注入"></a>2依赖注入</h2><p>vue内部已经编写好了依赖，只有当路由跳转的时候才会注入需要展示的页面，而其他页面则没有加载，在小型项目中体现可能不是很明显，大型项目的使用中会大大的提高网页的加载效率，性能效率。</p>
-<h1 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h1><h2 id="Node-js的需求"><a href="#Node-js的需求" class="headerlink" title="Node.js的需求"></a>Node.js的需求</h2><p>在上面的三大框架流行的同时nodejs也根据需求因势而出，在我们前后端分离做数据交互的时候，是依赖与后台同学的接口地址的，如果后台同学也在开发调试的时候出现bug，或者是我们调试出现请求接口出现问题就都互相影响，当然我们可以在页面上面写上假数据一个最后我们开发完成之后还要清除所有的假数据标签，一个是当接口调通了之后页面样式还是多多少少有些差距，这样nodejs就有了用武之地。我们前端同学的一个运行在浏览器端的服务器。  </p>
+<h1 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h1><h2 id="Node-js的需求"><a href="#Node-js的需求" class="headerlink" title="Node.js的需求"></a>Node.js的需求</h2><p>在上面的三大框架流行的同时nodejs也根据需求因势而出，在我们前后端分离做数据交互的时候，是依赖与后台同学的接口地址的，如果后台同学也在开发调试的时候出现bug，或者是我们调试请求接口出现问题就都互相影响，当然我们可以在页面上先写上假数据，等待最后开发完成后再清除掉所有的假数据，一个是当接口调通了之后页面样式还是多多少少有些差距，一个是需要清掉假数据很繁琐，这样nodejs就有了用武之地。我们前端同学就需要一个运行在浏览器端的服务器。  </p>
 <h2 id="Node-js的概念"><a href="#Node-js的概念" class="headerlink" title="Node.js的概念"></a>Node.js的概念</h2><p>简单的说 Node.js 就是运行在服务端的 JavaScript。<br>Node.js 是一个基于Chrome JavaScript 运行时建立的一个平台。<br>Node.js是一个事件驱动I/O服务端JavaScript环境，基于Google的V8引擎，V8引擎执行Javascript的速度非常快，性能非常好。</p>
 <h2 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h2><p>NPM是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署上的很多问题，常见的使用场景有以下几种：<br>1 允许用户从NPM服务器下载别人编写的第三方包到本地使用。<br>2 允许用户从NPM服务器下载并安装别人编写的命令行程序到本地使用。<br>3 允许用户将自己编写的包或命令行程序上传到NPM服务器供别人使用。<br>由于新版的nodejs已经集成了npm，所以之前npm也一并安装好了。同样可以通过输入 “npm -v” 来测试是否成功安装.</p>
 <h3 id="使用-npm-命令安装模块"><a href="#使用-npm-命令安装模块" class="headerlink" title="使用 npm 命令安装模块"></a>使用 npm 命令安装模块</h3><p>npm 安装 Node.js 模块语法格式如下：<br><code>npm install &lt;Module Name&gt;</code>  </p>
